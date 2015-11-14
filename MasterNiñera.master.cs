@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 public partial class MasterNiñera : System.Web.UI.MasterPage
 {
+    //masterpage
     public sql sql = new sql();
     public string nombre;
     public string cantSMS;

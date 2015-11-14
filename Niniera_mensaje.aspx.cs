@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Web.WebPages;
 public partial class Niniera_mensaje : System.Web.UI.Page
-{
+{/*JAJAJAJJJA*/
     public sql sql = new sql();
     public string runCliente;
     protected void Page_Load(object sender, EventArgs e)
