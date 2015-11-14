@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterAdmin.master.cs" Inherits="MasterAdmin" %>
+
+<%try { 
+    if (Session["rutA"] == null || Session["passA"] == null)
+    {
+        Response.Redirect("Admin_Login.aspx");
+    }
+    else {
+
+        System.Data.SqlClient.SqlDataReader admin;
+        admin = sql.consulta("exec datoAdmin "+Session["rutA"].ToString()+",'"+Session["passA"].ToString()+"'");
+        if(admin.Read())
+        {
+            nombre= admin[2].ToString()+" "+admin[3].ToString();
+        }
+        
+%>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/estilos.css" rel="stylesheet" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="css/bootstrap.min.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+      <!-- El logotipo y el icono que despliega el menú se agrupan
+       para mostrarlos mejor en los dispositivos móviles -->
+       <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse"data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Desplegar navegación</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+           </button>
+           <h5><img src="imagenes/img/tick.png" height="20" width="20" /><%=nombre %></h5>
+      </div>
+ 
+              <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+                   otro elemento que se pueda ocultar al minimizar la barra -->
+              <div class="collapse navbar-collapse navbar-ex1-collapse">
+         <ul class="nav navbar-nav">
+             <li><a href="Admin_index.aspx">Inicio</a></li>
+             <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Registrados <span class="caret"></span>
+                    </a>
+                <ul class="dropdown-menu">
+                   <li> <a href="Admin_verClientes.aspx">Ver clientes</a></li>
+                    <li><a href="Admin_verNinieras.aspx">Ver niñeras</a></li>
+                </ul>
+            </li>
+
+             <li><a href="Admin_mensaje.aspx">Mensajes</a></li>
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Mantenedores<span class="caret"></span>
+                </a>
+            <ul class="dropdown-menu">
+               <li> <a href="Admin_PartesNacionales.aspx">Partes Nacionales</a></li>
+                <li><a href="Admin_Precio.aspx">Precio de Niñera</a></li>
+                <li><a href="Admin_Estados.aspx">Estado</a>
+            </ul>
+          </li>
+             <li><a href="KillSession.aspx">Salir</a></li>
+         </ul>
+      </div>
+  </nav>
+    <div class="container well">
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</div>
+</body>
+</html>
+<%
+}
+}catch(Exception){
+    Response.Redirect("Admin_Login.aspx");
+}
+%>

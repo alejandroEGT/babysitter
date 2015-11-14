@@ -1,0 +1,480 @@
+﻿
+body {
+    background:url(../imagenes/img/bgVerde.jpg)no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+   
+}
+/* el menú en si mismo */
+  .mi-menu  {
+    list-style-type: none;
+    margin: 0 auto; /* si queremos centrarlo */
+    padding: 0;
+    /* la altura y su ancho dependerán de los textos */
+    position:relative;
+    height:50px;
+    width: 100%;
+
+    background: #415400;
+    background: -moz-linear-gradient(#415400,#5C7306);
+    background: -webkit-linear-gradient(#415400,#5C7306);
+    background: -o-linear-gradient(#415400,#5C7306);
+    background: -ms-linear-gradient(#415400,#5C7306);
+    background: linear-gradient(#415400,#5C7306);
+    
+  }
+
+  /* si es necesario, evitamos que Blogger de problemas con los saltos de línea cuando escribimos el HTML */
+  .mi-menu  br { display:none; }
+
+  /* cada item del menu */
+  .mi-menu  li {
+    display:block;
+    float: left; /* la lista se ve horizontal */
+    height: 31%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    
+  }
+  .mi-menu li a {
+    border-left: 1px solid #000;
+    border-right: 1px solid #666;
+    color: #EEE;
+    display: block;
+    font-family: Tahoma;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 28px;
+    padding: 0 14px;
+    margin: 6px 0;
+    text-decoration: none;
+    /* animamos el cambio de color de los textos */
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+
+  }
+  /* eliminamos los bordes del primer y el último */
+  .mi-menu li:first-child a { border-left: none; }
+  .mi-menu li:last-child a{ border-right: none; }
+  /* efecto hover cambia el color */
+  .mi-menu li:hover > a { color: Crimson; }
+
+  /* los submenús */
+  .mi-menu ul {
+    border-radius: 0 0 5px 5px;
+    left: 0;
+    margin: 0;
+    opacity: 0; /* no son visibles */
+    position: absolute;
+    top: 40px; /* se ubican debajo del enlace principal */
+    /* el color de fondo */
+    background: #222;
+    background: -moz-linear-gradient(#222,#555);
+    background: -webkit-linear-gradient(#22,#555);
+    background: -o-linear-gradient(#222,#555);
+    background: -ms-linear-gradient(#222,#555);
+    background: linear-gradient(#222,#555);
+    /* animamos su visibildiad */
+    -moz-transition: opacity .25s ease .1s;
+    -webkit-transition: opacity .25s ease .1s;
+    -o-transition: opacity .25s ease .1s;
+    -ms-transition: opacity .25s ease .1s;
+    transition: opacity .25s ease .1s;
+
+  }
+  /* son visibes al poner el cursor encima */
+  .mi-menu li:hover > ul { opacity: 1; }
+
+   /* cada un ode los items de los submenús */
+  .mi-menu ul li {
+    height: 0; /* no son visibles */
+    overflow: hidden;
+    padding: 0;
+    /* animamos su visibildiad */
+    -moz-transition: height .25s ease .1s;
+    -webkit-transition: height .25s ease .1s;
+    -o-transition: height .25s ease .1s;
+    -ms-transition: height .25s ease .1s;
+    transition: height .25s ease .1s;
+  }
+  .mi-menu li:hover > ul li {
+    height: 36px; /* los mostramos */
+    overflow: visible;
+    padding: 0;
+  }
+  .mi-menu ul li a {
+    border: none;
+    border-bottom: 1px solid #111;
+    margin: 0;
+    /* el ancho dependerá de los textos a utilizar */
+    padding: 5px 20px;
+    width: 100px;
+
+  }
+
+  /* el último n otiene un borde */
+  .mi-menu ul li:last-child a { border: none; }
+
+.carousel slide {
+   border-radius:3%;
+}
+
+#contenedor {
+    margin-top:180px;
+    background-color:white;
+    height:auto;
+    width:100%; 
+    border-radius:2%;
+    border:#59A31A solid 1px ;
+     
+}
+.navbar-header h4 {
+    color:white;
+    padding-top:10px;
+    padding-left:5px;
+    padding-right:8px;
+}
+
+.borde {
+    border-radius:5px;
+    margin-top:3%;
+    margin-left:14%;
+    background-color:#88A607;
+
+    width:66%;
+    text-align:right;
+    padding-right:6%;
+    padding-top:1%;
+    color:white;
+}
+.textoIndex {
+   
+    margin-left:15%;
+    margin-right:20%;
+    margin-top:5%; 
+}
+footer {
+    font-size:100%;
+    color:white;
+    text-align:center;
+}
+.centrado {
+    background-color:red;
+    margin-right:20%;
+    margin-left:30%;
+   
+    
+}
+    
+.centrado h5 {
+    
+
+}
+.centrado a {
+    padding-left:13%;
+    
+}
+#formularioRegistro {
+    margin-top:40%;
+   margin-right:21%;
+     margin-top:3%;
+    margin-left:15%;
+    
+    
+    
+   }
+#formularioRegistro strong{
+    margin-left:5px;
+    margin-top:5px;
+}
+    #formularioRegistro strong p {
+        margin-left:5px;
+        margin-top:-5px;
+        line-height:1px;
+       
+    }
+
+   .Txt {
+  
+ 
+   margin-bottom:10px;
+   color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+
+
+#imgRegistro {
+    margin-left:5%;
+    margin-top:5%;
+    height:300px;    
+}
+    #imgRegistro #img1 {
+        float:left;
+     padding-top:4%;
+        margin-left:200px;
+        
+      
+       
+    }
+#img1 {
+    
+}
+#img2 {
+    
+}
+    #img2 a img {
+        margin-top:-10%;
+        
+    }
+
+ #txtNana {
+     
+     
+     
+ }
+#txtCliente {
+    
+    
+}
+.TopNana {
+   display:block;
+        
+  margin-top:12%;
+       
+    
+}
+    .TopNana img {
+        border-radius:5px;
+        border:2px;
+    }
+    .TopNana .boton {
+        float:right;
+       background: #38f044;
+  background-image: -webkit-linear-gradient(top, #38f044, #53a31d);
+  border-radius: 6px;
+  font-family: Arial;
+  color: #ffffff;
+  border:1px solid white;
+  padding: 5px 20px 5px 20px;
+  text-decoration: none;
+    }
+    .TopNana .boton:hover {
+         background: #00ff1a;
+  background-image: -webkit-linear-gradient(top, #00ff1a, #008a00);
+  background-image: -moz-linear-gradient(top, #00ff1a, #008a00);
+  background-image: -ms-linear-gradient(top, #00ff1a, #008a00);
+  background-image: -o-linear-gradient(top, #00ff1a, #008a00);
+  background-image: linear-gradient(to bottom, #00ff1a, #008a00);
+  text-decoration: none;
+    }
+
+
+   hr, .hrcolor {
+   height: 1px;
+   border: 0;
+   color: black;
+   background-color: black;
+}
+
+.TopNana img {
+    float:left;
+    margin-right:10%;
+    
+    
+
+}
+
+nav div h5 {
+    color:aqua;
+    margin-top:17px;
+    margin-left:15px;
+    
+}
+div ul li {
+    padding-left:20px;
+}
+.volver {
+   display:block;
+   position:fixed;
+   margin-top:-50px;
+   margin-left:2%;
+}
+
+.ec-stars-wrapper {
+	/* Espacio entre los inline-block (los hijos, los `a`) 
+	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+	font-size: 0;
+	/* Podríamos quitarlo, 
+		pero de esta manera (siempre que no le demos padding), 
+		sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+		también se esté haciendo hover a alguna estrella */
+	display: inline-block;
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 32px;
+	font-size: 2rem;
+	
+	color: #888;
+}
+
+.ec-stars-wrapper:hover a {
+	color: #FFD200;
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.ec-stars-wrapper > a:hover ~ a {
+	color: #888;
+}
+
+.fotoN img{
+    float:left;
+     height:250px;
+      width:227px;
+}
+.descripNiñera {
+   
+    display:block;
+    margin-left:240px;
+}
+
+#btn_ingresar {
+    background-color:red;
+   display:block;
+   float:right;
+   margin-right:15%;
+   margin-top:3%;
+}
+    #btn_ingresar .boton {
+        background: #01DF01;
+  font-family: Arial;
+  color: #ffffff;
+  border:1px solid white;
+  padding: 5px 20px 5px 20px;
+  text-decoration: none;
+   }
+   #btn_ingresar .boton:hover {
+       background: #00ff1a;
+        background-image: -webkit-linear-gradient(top, #38f044, #53a31d);
+  background-image: -webkit-linear-gradient(top, #00ff1a, #008a00);
+  background-image: -moz-linear-gradient(top, #00ff1a, #008a00);
+  background-image: -ms-linear-gradient(top, #00ff1a, #008a00);
+  background-image: -o-linear-gradient(top, #00ff1a, #008a00);
+  background-image: linear-gradient(to bottom, #00ff1a, #008a00);
+  text-decoration: none;
+   }
+
+  .ddl
+        {
+            border:2px solid #7d6754;
+            border-radius:5px;
+            padding:3px;
+            -webkit-appearance:square-button; 
+            background-color:#CEF6EC;
+            font-family:Arial;
+            color:#0B610B;
+        }
+
+.c_niñera {
+    margin-left: 10px;
+    margin-top:6px;
+    padding:5px 5px;
+    display:inline-block;
+    height:auto;
+    width:230px;
+    text-align:center;
+    font-style:italic;   
+    
+}
+.btnver{
+    padding-left:-20px;
+    margin-left:-5px;
+  width:230px; 
+  background: #38f044;
+  background-image: -webkit-linear-gradient(top, #38f044, #53a31d);
+  border-radius: 6px;
+  font-family: Arial;
+  color: #ffffff;
+  border:1px solid white;
+  padding: 5px 20px 5px 20px;
+  text-decoration: none;
+}
+
+.nn {
+    margin-left:15px;
+    margin-right:15px;
+}
+
+div div div h4 img {
+   margin-top:-6px;
+}
+
+.bodyModal {
+    background-color:red;
+    overflow:auto;
+}
+.client {
+    margin-left:10%;
+    margin-right:10%;
+}
+.clientedatos {
+    margin-top:2%;
+    padding-left:15%;
+    padding-top:2px;
+    margin-left:15%;
+    margin-right:15%;
+    background-color:white;
+    border-radius:3%;
+    
+}
+
+textarea {
+    resize:none;
+    height:130px;
+    width:232px;
+}
+
+.Grilla {
+}
+
+.textoMensaje {
+   
+    border:1px solid black;
+    height:200px;
+    width:330px;
+   overflow:auto;
+    border-radius:5px;
+    background-color:#F2F2F2;
+      color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+}
